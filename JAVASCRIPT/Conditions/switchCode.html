@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="output"></div>
+    Enter name: <input id="fname" type="text">
+    <br><br>
+    <button id="btn" onclick="showUserDetail()">Click</button>
+    
+    <script>
+        function showUserDetail(){
+        var userName = document.getElementById('fname').value;
+        var result;
+
+            switch(userName.toLowerCase()){
+                case "dinesh":
+                    result = userName + " in an UI Development Teacher";
+                    break;
+
+                case "dhoni":
+                    result = userName + " was one of the best captains for indian Cricket Team";
+                    break;
+
+                case "prabhas":
+                    result = userName + " is an Indian Movie Superstar";
+                    break;    
+                    
+                default:
+                    result = userName + " is invalid User Name! Please try again.";
+            }
+            document.getElementById('output').innerHTML = result;
+        }
+    </script>
+</body>
+</html>

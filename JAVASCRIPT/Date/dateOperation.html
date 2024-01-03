@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="output"></div>
+    <button onclick="basicMethod()">Click</button>
+    
+    <script>
+        function basicMethod(){
+            var dateObj = new Date();
+            var get_min = dateObj.getMinutes();
+            var get_sec = dateObj.getSeconds();
+            var get_mils = dateObj.getMilliseconds();
+            var get_time = dateObj.getTime();
+            var date_day = dateObj.getDay();
+            var get_date = dateObj.getDate();
+            var get_month = dateObj.getMonth()+1;
+            var get_year = dateObj.getFullYear();
+
+            // var datestamp = get_day+get_month+get_year;
+            var datestamp = dateObj.toLocale()
+
+            document.getElementById('output').innerHTML = date_day;
+
+            console.log(Date.getDate());
+            console.log(dateObj)
+        
+            
+        }
+    </script>
+</body>
+</html>

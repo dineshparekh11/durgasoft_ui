@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="switch.css">
+
+</head>
+<body>
+    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio laborum nisi accusamus vero sint nihil ipsum ullam illo harum, ratione vitae, beatae sit blanditiis quaerat necessitatibus, et aut in quo.</h3>
+    Check Grade :<input id="info" type="text" onkeyup="">
+    <br><br>
+    Male<input id="checkBox1" type="checkbox" onblur="checkGrade()">      Female<input id="checkBox2" type="checkbox">     Other<input id="checkBox3" type="checkbox">
+
+    <br><br>
+    <button onclick="checkGrade()">Check</button>
+    <p id="result" >Output</p>
+
+<script>
+
+function checkGrade(){
+   if(document.getElementById('checkBox1').checked){
+        console.log("Checkbox is checked");
+   }
+   else{
+    console.log("Checkbox is unlocked");
+   }
+}
+
+// var grade = "C";
+// var result;
+
+function checkGrade(){
+    var res = document.getElementById('info').value;
+switch (res) {
+    case "A":
+        result = "A (Excellent) 90% abou";
+        break;
+
+    case "B":
+        result = "B (Good) 70% abou";
+        break;
+
+    case "C":
+        result = "C (Average) 50% abou";
+        break;
+
+    case "D":
+        result = "D (Below than average) 35% abou";
+        break;
+
+    case "E":
+        result = "F (Fail) Less than 35%";
+        break;
+
+    default:
+        result = "No Grade";
+
+}
+
+alert(result);
+
+document.getElementById("result").innerHTML = "<p>result</p>"
+
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <ul id="list"></ul>
+    <button onclick="basicMethod()">Click</button>
+
+    <script>
+        function basicMethod() {
+
+            var basicArray = [12,34,54,64,23,56,14,26];
+            var studentsList = [
+                {
+                    "name": "John",
+                    "age": 22,
+                    "grade": "A+",
+                    "mailId":"john@gmail.com"
+                },
+                {
+                    "name": "Merry",
+                    "age": 23,
+                    "grade": "B",
+                    "mailId":"merry@gmail.com"
+                },
+                {
+                    "name": "Shubh",
+                    "age": 24,
+                    "grade": "B+",
+                    "mailId":"shubh@gmail.com"
+                },
+                {
+                    "name": "Rani",
+                    "age": 25,
+                    "grade": "A+",
+                    "mailId":"rani@gmail.com"
+                },
+
+            ]
+        var filterResult = basicArray.filter(function(getValue){return getValue>0});
+
+        var map_filter_result = filter_result.map(function(get_pos_value){return "<li>"+get_pos_value+"</li>"});
+
+        var remove_commas_result = map_filter_result.join("");
+
+        document.getElementById('list').innerHTML = remove_commas_results;
+
+        }
+    </script>
+</body>
+</html>

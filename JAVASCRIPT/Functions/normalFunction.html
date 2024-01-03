@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Naming function or normal function without params
+        function addOne(){
+            console.log("This is Naming add method");
+        }
+        addOne();
+
+
+        //Naming Function or normal with params
+
+        function addTwo(a,b){
+            console.log(a+b);
+        }
+        addTwo(6);
+
+
+        //Anonymous Function without params
+
+        var addThree = function(){
+            console.log('Thois is anonymous method');
+        }
+        addThree();
+
+
+        //Anonymous Function with params
+
+        var addFour = function(a,b){
+            console.log(a+b);
+        }
+        addFour(5,8);
+
+
+        //lamda expression or fat arrow method without params
+
+       var addFive = () => {
+            console.log("Arrow function display");
+        }
+        addFive();
+
+        // lambda expression or fat arrow method with params
+        
+        var addSix = (a,b) => {
+            console.log(a+b);
+        }
+        addSix(7,8);
+
+        var sample = a => a;
+        
+        console.log(sample(8));
+</script>
+</head>
+<body>
+    <ul id="listparent"></ul>
+
+    <button onclick="basicMethod()">Display</button>
+</body>
+</html>

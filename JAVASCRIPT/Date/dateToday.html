@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="output"></div><br><br>
+
+    <button onclick="basicMethod()">Display</button>
+    <script>
+        function basicMethod(){
+            var dateObj = new Date();
+            var get_day = dateObj.getDay();
+            var result = '';
+            switch (get_day){
+                case 0:
+                result = "Sunday";
+                    break;
+                case 1:
+                result = "Monday";
+                    break;
+                case 2:
+                result = "Tuesday";
+                    break;
+                case 3:
+                result = "Wednesday";
+                    break;
+                case 4:
+                result = "Thursday";
+                    break;
+                case 5:
+                result = "Friday";
+                    break;
+                case 6:
+                result = "Saturday";
+                    break;
+            }   
+            document.getElementById('output').innerHTML = "Today is " + result;
+        }
+    </script>
+</body>
+</html>

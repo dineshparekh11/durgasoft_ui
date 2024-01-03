@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    First Number: <input id="num1" type="text"><br><br>
+    Second Number: <input id="num2" type="text"><br><br>
+
+    <button onclick="checkNumber()">Check</button>
+
+    <script>
+
+        function checkNumber(){
+            var Fnum = parseFloat(document.getElementById('num1').value);
+            var Snum = parseFloat(document.getElementById('num2').value);
+
+            if(Fnum == Snum){
+                alert("The numbers are equal.");
+            }
+            else if(Fnum > Snum){
+                alert("First number is highest");
+            }
+            else{
+                alert("Second number is highest");
+            }
+        }
+
+    </script>
+</body>
+</html>

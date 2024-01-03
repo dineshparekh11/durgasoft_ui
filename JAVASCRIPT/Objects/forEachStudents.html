@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <body>    
+        <li id="list"></li>
+        <button onclick="studentObj()">Click</button>
+    
+        <script>
+    
+            function studentObj(){
+            var students = [
+                { 
+                    "id":1,
+                    "firstName": "Ravi",
+                    "lastName": "Kumar",
+                    "email": "ravi1@gmail.com",
+                },
+                { 
+                    "id":2,
+                    "firstName": "Gauri",
+                    "lastName": "Reddi",
+                    "email": "gauri31@gmail.com",
+                },
+                { 
+                    "id":3,
+                    "firstName": "Hari",
+                    "lastName": "Junewale",
+                    "email": "harime@gmail.com",
+                },
+                { 
+                    "id":4,
+                    "firstName": "Kajal",
+                    "lastName": "M.",
+                    "email": "kajalm@gmail.com",
+                },
+    
+            ];
+            
+            var result = '';
+            students.forEach(function(stuObj){
+                result += "<li>" + stuObj.firstName +"</li>";
+            });
+            document.getElementById("list").innerHTML += result;
+        }
+        </script>
+    </body>
+    
+</body>
+</html>
+
+
+<!-- -----------
